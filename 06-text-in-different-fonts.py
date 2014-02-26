@@ -4,6 +4,10 @@
 """
 This example shows how to display text in different colours and fonts
 
+for this to work, you'll need to download the font from: 
+http://www.1001freefonts.com/five_dozen.font and extract FiveDozen.ttf into the same 
+folder as this python file.
+
 
 Things to try:
 TODO: change the code so that all the text is red
@@ -24,11 +28,6 @@ screen = pygame.display.set_mode((800,600))
 pygame.display.set_caption("Pygame Example")
 
 # load the font
-""" 
-for this to work, you'll need to download the font from: 
-http://www.1001freefonts.com/five_dozen.font and extract FiveDozen.ttf into the same 
-folder as this python file.
-"""
 try:
     # ideally, try to load a fancy font
     font = pygame.font.Font("FiveDozen.ttf", 36)
