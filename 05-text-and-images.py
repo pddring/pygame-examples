@@ -34,12 +34,17 @@ screen = pygame.display.set_mode((800,600))
 pygame.display.set_caption("Pygame Example")
 
 # load images
-img_card = pygame.image.load("images/card-back.png")
-img_heart = pygame.image.load("images/card-heart.png")
-img_club = pygame.image.load("images/card-club.png")
-img_spade = pygame.image.load("images/card-club.png")
-img_diamond = pygame.image.load("images/card-diamond.png")
-
+try:
+    img_card = pygame.image.load("images/card-back.png")
+    img_heart = pygame.image.load("images/card-heart.png")
+    img_club = pygame.image.load("images/card-club.png")
+    img_spade = pygame.image.load("images/card-club.png")
+    img_diamond = pygame.image.load("images/card-diamond.png")
+except:
+    print "Error: Could not load images: you can download them from github.com/pddring/pygame-examples"
+    print "They should be saved in a folder called images in the same place as this python file"
+    exit()
+    
 images_suits = [img_heart, img_club, img_spade, img_diamond]
 
 # create a font
