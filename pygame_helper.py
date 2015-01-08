@@ -71,11 +71,11 @@ def raw_input_at(screen, message_pos, prompt_rect, message, size, color):
     text = font.render(message, True, color)
     screen.blit(text, message_pos)
     
-    str = ""
+    string = ""
     # draw input box
     while True:
         pygame.draw.rect(screen, (0,0,0), prompt_rect, 0)
-        text = font.render(str + "_", True, (255,255,255))
+        text = font.render(string + "_", True, (255,255,255))
         screen.blit(text, prompt_rect)
         pygame.display.flip()
     
@@ -83,17 +83,17 @@ def raw_input_at(screen, message_pos, prompt_rect, message, size, color):
         
         # stop waiting for key presses if the user presses enter
         if key == pygame.K_RETURN or key == pygame.K_ESCAPE:
-            return str
+            return string
         
         # go back one character if the user presses backspace
         elif key == pygame.K_BACKSPACE:
-            str = str[:-1]
+            string = string[:-1]
         else:
             try:
                 if pygame.key.get_mods() & pygame.KMOD_SHIFT:
-                    str += chr(key).upper()
+                    string += chr(key).upper()
                 else:
-                    str += chr(key)
+                    string += chr(key)
             except:
                 pass
 
