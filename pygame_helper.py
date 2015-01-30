@@ -14,24 +14,26 @@ Displays text at a given position.
 This is designed as a pygame replacement for print
 
 e.g:
-    from pygame_helper import *
-    # set up pygame
-    pygame.init()
     
-    # set up the screen in 800 x 600 resolution
-    screen = pygame.display.set_mode((800,600))
-    
-    # fill the screen in white
-    screen.fill((255,255,255)) 
-    
-    # display hello in red, size 30 at x=100, y=100
-    print_at(screen, (100,100), "Hello!", 30, (255,0,0))
-    
-    # update the display
-    pygame.display.flip()
-    
-    # pause before quitting
-    wait_for_key()
+from pygame_helper import *
+# set up pygame
+pygame.init()
+
+# set up the screen in 800 x 600 resolution
+screen = pygame.display.set_mode((800,600))
+
+# fill the screen in white
+screen.fill((255,255,255)) 
+
+# display hello in red, size 30 at x=100, y=100
+print_at(screen, (100,100), "Hello!", 30, (255,0,0))
+
+# update the display
+pygame.display.flip()
+
+# pause before quitting
+wait_for_key()
+
 """
 def print_at(screen, pos, message, size, color):
     font = pygame.font.Font(None, size)
@@ -44,25 +46,26 @@ Designed as a pygame replacement for raw_input
 
 e.g. 
 
-    from pygame_helper import *
-    # set up pygame
-    pygame.init()
-    
-    # set up the screen in 800 x 600 resolution
-    screen = pygame.display.set_mode((800,600))
-    
-    # fill the screen in white
-    screen.fill((255,255,255)) 
-    
-    # ask the user's name
-    name = raw_input_at(screen, (0,0), (0, 20, 200, 20), "What is your name?", 20, (0,0,0)) 
-    print_at(screen, (0,100), "Hello " + name, 30, (0,0,0))
-    
-    # update the display
-    pygame.display.flip()
-    
-    # pause before quitting
-    wait_for_key()
+from pygame_helper import *
+# set up pygame
+pygame.init()
+
+# set up the screen in 800 x 600 resolution
+screen = pygame.display.set_mode((800,600))
+
+# fill the screen in white
+screen.fill((255,255,255)) 
+
+# ask the user's name
+name = raw_input_at(screen, (0,0), (0, 20, 200, 20), "What is your name?", 20, (0,0,0)) 
+print_at(screen, (0,100), "Hello " + name, 30, (0,0,0))
+
+# update the display
+pygame.display.flip()
+
+# pause before quitting
+wait_for_key()
+
 """
 
 def raw_input_at(screen, message_pos, prompt_rect, message, size, color):
@@ -100,8 +103,8 @@ def raw_input_at(screen, message_pos, prompt_rect, message, size, color):
 """
 wait for the user to press a key and return the keycode
 e.g.
-    key_pressed = wait_for_key()
-    print("You pressed" + chr(key_pressed))
+key_pressed = wait_for_key()
+print("You pressed" + chr(key_pressed))
 """
 def wait_for_key():
     e = pygame.event.wait()
